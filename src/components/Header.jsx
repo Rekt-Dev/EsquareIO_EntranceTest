@@ -1,13 +1,16 @@
 import requestOptions from "../services/requestOptions.js";
+import { React, useState } from "react";
 
 function Header() {
+  const [find, setFind] = useState("");
   function concatSearch() {
     fetch(link, requestOptions)
       .then((response) => response.json())
       .then((data) => console.log(data));
   }
-
-  const [find, setFind] = useState("");
+  let userSearch;
+  const baseLink = "https://www.googleapis.com/books/v1/volumes?q=";
+  let link = baseLink + userSearch;
 
   function HandleChange(event: any) {
     const e = event.target.value;

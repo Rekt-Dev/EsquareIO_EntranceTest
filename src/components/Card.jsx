@@ -5,7 +5,7 @@ import { goToTitle } from "../services/goToTitle";
 const startLink = "https://www.googleapis.com/books/v1/volumes?q=";
 let searchQuery = "";
 //the artworkid  which is image_id comes from the json weve just used a promise to get
-const constructedLink = startLink + searchQuery;
+const constructedLink = startLink + searchQuery + "intitle";
 
 export function Card(props) {
   return (
@@ -22,7 +22,7 @@ export function Card(props) {
             height="30%"
             alt=" Book Title"
             src={
-              "https://www.programmableweb.com/sites/default/files/styles/facebook_scale_width_200/public/icon_googledevs_200.png?itok=nHEw_MXV"
+              "https://books.google.com/books/content?id=_ojXNuzgHRcC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70jAbnovYhYAgBS2fMWQ42G2Q99zdUXmAZ5Q6A0EAitz5VlEN7gnWYzrRNEqKwPrWnqUZL_UGsBrrhEXsMJRHA2xOwqVuuGvf_G8DgKewXWot2KReoq8ZUvYrT4RAyXDPNQG_9Z&source=gbs_api"
             }
           />
           <div

@@ -25,10 +25,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        {loading && <img src={logo} className="App-logo" alt="logo" />}
-        {todos && todos.map((todo) => <p key={todo.id}>{todo.title}</p>)}
-      </header>
+      <input placeholder="Enter Your Search Here..."></input>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
+import { Card } from "./components/Card";
 const App = () => {
   const [todos, setTodos] = useState();
   const [loading, setLoading] = useState(false);
@@ -28,6 +28,7 @@ const App = () => {
       <input placeholder="Enter Your Search Here..."></input>
       <br />
       <button>SEARCH</button>
+      <Card />
     </div>
   );
 };

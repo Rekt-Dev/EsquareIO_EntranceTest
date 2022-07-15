@@ -2,11 +2,9 @@ import { MDBRipple } from "mdb-react-ui-kit";
 import { goToAuthor } from "../services/goToAuthor";
 import { goToTitle } from "../services/goToTitle";
 
-const endLink = "/full/843,/0/default.jpg";
 const startLink = "https://www.googleapis.com/books/v1/volumes?q=";
 let searchQuery = "";
 //the artworkid  which is image_id comes from the json weve just used a promise to get
-const artworkId = "fd26fe20-e8fd-d80a-c3e9-c07365b0db61";
 const constructedLink = startLink + searchQuery;
 ("https://api.artic.edu/api/v1/artworks?fields=id,title,image_id&limit=100");
 export function Card(props) {

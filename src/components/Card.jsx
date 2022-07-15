@@ -6,7 +6,7 @@ const startLink = "https://www.googleapis.com/books/v1/volumes?q=";
 let searchQuery = "";
 //the artworkid  which is image_id comes from the json weve just used a promise to get
 const constructedLink = startLink + searchQuery;
-("https://api.artic.edu/api/v1/artworks?fields=id,title,image_id&limit=100");
+
 export function Card(props) {
   return (
     <MDBRipple

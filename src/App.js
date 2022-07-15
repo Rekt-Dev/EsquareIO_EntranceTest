@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Card } from "./components/Card";
 import { Main } from "./components/Main";
 const App = () => {
   const [todos, setTodos] = useState();
@@ -10,7 +8,7 @@ const App = () => {
     let usersSearchQuery = "";
     try {
       const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=search+terms
+        `https://www.googleapis.com/books/v1/volumes?q=${usersSearchQuery}'
 +${usersSearchQuery}`
       );
       setTodos(await response.json());

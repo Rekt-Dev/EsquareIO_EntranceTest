@@ -3,12 +3,12 @@ import "./App.css";
 import { Main } from "./components/Main";
 
 const App = () => {
-  const [userSearchQuery, setuserSearchQuery] = useState();
+  const [userSearchQuery, setUserSearchQuery] = useState();
   const [loading, setLoading] = useState(false);
   async function getData() {
     try {
       const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${usersSearchQuery}'
+        `https://www.googleapis.com/books/v1/volumes?q=${userSearchQuery}'
 +${userSearchQuery}`
       );
       await response.json();

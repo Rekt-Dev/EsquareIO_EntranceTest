@@ -1,12 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { StrictMode } from "react";
+import * as ReactDOMClient from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { GoToAuthor } from "./components/GoToAuthor";
+import { OpenCard } from "./components/OpenCard";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const rootElement = document.getElementById("root");
+const root = ReactDOMClient.createRoot(rootElement);
+
+root.render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="gotoauthor" element={<GoToAuthor />} />
+      <Route path="opencard" element={<OpenCard />} />
+    </Routes>
+  </BrowserRouter>
+);

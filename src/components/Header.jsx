@@ -20,7 +20,7 @@ function Header() {
 
   return (
     <div>
-      <h1 className="center">The Art Institute of Chicago</h1>
+      <h1 className="center">Google Books Seacrh App</h1>
 
       <div className="center">
         <input onChange={HandleChange} placeholder="Enter your search here" />
@@ -31,9 +31,6 @@ function Header() {
             Search
           </button>
         </div>
-        <button onClick={lucky} className="button" type="button">
-          Randomize it !
-        </button>
       </div>
       <br></br>
     </div>

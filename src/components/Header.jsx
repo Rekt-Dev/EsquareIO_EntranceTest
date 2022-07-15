@@ -30,12 +30,15 @@ export function Header() {
 
   return (
     <div>
-      <h1 className="center">Google Books Seacrh App</h1>
+      <h1 className="centered">Google Books Seacrh App</h1>
+      <div className="centered">
 
-      <div className="center">
         <input onChange={HandleChange} placeholder="Enter your search here" />
+        <br />
+        <br />
+
       </div>
-      <div className="center">
+      <div className="centered">
         <div className="button">
           <button onClick={concatSearch} type="button" className="center">
             Search

@@ -1,11 +1,11 @@
 import { MDBRipple } from "mdb-react-ui-kit";
-import { goToAuthor } from "../services/goToAuthor";
-import { goToTitle } from "../services/goToTitle";
+import { goToAuthor } from "./GoToAuthor";
+import { goToTitle } from "./GoToTitle";
 
-const startLink = "https://www.googleapis.com/books/v1/volumes?q=";
+const baseLink = "https://www.googleapis.com/books/v1/volumes?q=";
 let searchQuery = "";
 //the artworkid  which is image_id comes from the json weve just used a promise to get
-const constructedLink = startLink + searchQuery + "intitle";
+const constructedLink = baseLink + searchQuery + "intitle";
 
 export function Card(props) {
   return (
@@ -18,7 +18,7 @@ export function Card(props) {
       <div className="">
         <a href="OpenCard">
           <img
-            width="90%"
+            width="60%"
             height="30%"
             alt=" Book Title"
             src={

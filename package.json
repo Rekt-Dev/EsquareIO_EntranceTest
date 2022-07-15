@@ -6,11 +6,12 @@
     "pnp": true
   },
   "dependencies": {
+    "eslint-plugin-react-hooks": "4.6.0",
     "mdb-react-ui-kit": "4.1.0",
-    "react": "17.0.2",
-    "react-dom": "18.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.3.0-next-e61fd91f5-20220630",
     "react-router-dom": "6.3.0",
-    "react-scripts": "3.4.4"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

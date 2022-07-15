@@ -10,12 +10,12 @@ const constructedLink = baseLink + searchQuery + "intitle";
 export function Card(props) {
   return (
     <MDBRipple
-      className="bg-image hover-overlay shadow-1-strong rounded"
+      className=""
       style={{ maxWidth: "22rem" }}
       rippleTag="div"
       rippleColor="light"
     >
-      <div className="">
+      <div className="centered">
         <a href="OpenCard">
           <img
             width="60%"

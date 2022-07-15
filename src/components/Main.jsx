@@ -1,5 +1,7 @@
 import { json } from "../services/json";
 import { Card } from "./Card";
+import {data1} from "./Header"
+import {data} from "./Header"
 
 export function Main() {
   return (

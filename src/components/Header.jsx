@@ -16,7 +16,6 @@ export function Header() {
       .then ((data) => setSearchAnswer(data))
       .then((data)=>console.log(data))
 
-      
     }
     
   const baseLink = "https://www.googleapis.com/books/v1/volumes?q=";

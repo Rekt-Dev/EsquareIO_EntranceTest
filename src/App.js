@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Main } from "./components/Main";
+
 const App = () => {
-  const [todos, setTodos] = useState();
+  const [userSearchQuery, setuserSearchQuery] = useState();
   const [loading, setLoading] = useState(false);
   async function getData() {
-    let usersSearchQuery = "";
     try {
       const response = await fetch(
         `https://www.googleapis.com/books/v1/volumes?q=${usersSearchQuery}'
-+${usersSearchQuery}`
++${userSearchQuery}`
       );
-      setTodos(await response.json());
+      setuserSearchQuery(await response.json());
     } catch (e) {
       console.log(e);
     } finally {

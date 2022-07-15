@@ -12,7 +12,7 @@ function Header() {
   const baseLink = "https://www.googleapis.com/books/v1/volumes?q=";
   let link = baseLink + userSearch;
 
-  function HandleChange(event: any) {
+  function HandleChange(event) {
     const e = event.target.value;
     setFind(e);
     return e;

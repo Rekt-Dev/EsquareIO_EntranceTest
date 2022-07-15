@@ -7,9 +7,11 @@ const App = () => {
   const [todos, setTodos] = useState();
   const [loading, setLoading] = useState(false);
   async function getData() {
+    let usersSearchQuery = "";
     try {
       const response = await fetch(
-        "https://jsonplaceholder.typicode.com/photos"
+        `https://www.googleapis.com/books/v1/volumes?q=search+terms
++${usersSearchQuery}`
       );
       setTodos(await response.json());
     } catch (e) {

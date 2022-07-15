@@ -3,12 +3,22 @@ import { React, useState } from "react";
 
 export function Header() {
   const [find, setFind] = useState("");
+  const [searchAnswer, setSearchAnswer ] = useState([]);
+
   function concatSearch() {
+    let data1
+  
     fetch(link, requestOptions)
       .then((response) => response.json())
-      .then((data) => console.log(data));
-  }
-  let userSearch;
+      .then((data)=>console.log(data))
+      .then((data)=> data1=data)
+      .then (console.log(data1))
+      .then ((data) => setSearchAnswer(data))
+      .then((data)=>console.log(data))
+
+      
+    }
+    
   const baseLink = "https://www.googleapis.com/books/v1/volumes?q=";
   let link = baseLink + find;
 
@@ -27,7 +37,7 @@ export function Header() {
       </div>
       <div className="center">
         <div className="button">
-          <button onClick={concatSearch} type="button" className="button">
+          <button onClick={concatSearch} type="button" className="center">
             Search
           </button>
         </div>

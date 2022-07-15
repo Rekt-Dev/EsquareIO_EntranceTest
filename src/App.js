@@ -26,6 +26,8 @@ const App = () => {
   return (
     <div className="App">
       <input placeholder="Enter Your Search Here..."></input>
+      <br />
+      <button>SEARCH</button>
     </div>
   );
 };

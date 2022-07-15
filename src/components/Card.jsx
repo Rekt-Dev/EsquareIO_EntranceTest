@@ -1,7 +1,8 @@
 import { MDBRipple } from "mdb-react-ui-kit";
 import { goToAuthor } from "./GoToAuthor";
 import { goToTitle } from "./GoToTitle";
-
+import App from "../App.css";
+import index from "../index.css";
 const baseLink = "https://www.googleapis.com/books/v1/volumes?q=";
 let searchQuery = "";
 //the artworkid  which is image_id comes from the json weve just used a promise to get
@@ -10,12 +11,12 @@ const constructedLink = baseLink + searchQuery + "intitle";
 export function Card(props) {
   return (
     <MDBRipple
-      className=""
-      style={{ maxWidth: "22rem" }}
+      className="centered"
+      style={{ maxWidth: "20rem" }}
       rippleTag="div"
       rippleColor="light"
     >
-      <div className="centered">
+      <div className="">
         <a href="OpenCard">
           <img
             width="60%"
@@ -26,7 +27,7 @@ export function Card(props) {
             }
           />
           <div
-            className="mask"
+            className=""
             style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
           ></div>
         </a>

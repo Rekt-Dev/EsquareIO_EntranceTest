@@ -11,7 +11,7 @@ const App = () => {
         `https://www.googleapis.com/books/v1/volumes?q=${usersSearchQuery}'
 +${userSearchQuery}`
       );
-      setuserSearchQuery(await response.json());
+      await response.json();
     } catch (e) {
       console.log(e);
     } finally {

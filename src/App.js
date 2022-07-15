@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Main } from "./components/Main";
+import {Header} from "./components/Header"
 
-const App = () => {
-  const [userSearchQuery, setUserSearchQuery] = useState();
+export const App = () => {
+  const [userSearchQuery, setUserSearchQuery] = useState("");
   const [loading, setLoading] = useState(false);
+
   async function getData() {
     try {
       const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${userSearchQuery}'
-+${userSearchQuery}`
+        `https://www.googleapis.com/books/v1/volumes?q=${userSearchQuery}`
+
       );
       await response.json();
     } catch (e) {
@@ -24,12 +26,9 @@ const App = () => {
     getData();
   }, []);
 
-  return (
+  return (<div>
     <div className="">
-      <input className="" placeholder="Enter Your Search Here..."></input>
-      <br />
-      <button className="">SEARCH</button>
-      <div className="center">
+     <Header />
         <Main />
       </div>
     </div>

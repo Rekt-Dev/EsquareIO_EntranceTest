@@ -1,7 +1,7 @@
 import requestOptions from "../services/requestOptions.js";
 import { React, useState } from "react";
 
-function Header() {
+export function Header() {
   const [find, setFind] = useState("");
   function concatSearch() {
     fetch(link, requestOptions)
@@ -10,7 +10,7 @@ function Header() {
   }
   let userSearch;
   const baseLink = "https://www.googleapis.com/books/v1/volumes?q=";
-  let link = baseLink + userSearch;
+  let link = baseLink + find;
 
   function HandleChange(event) {
     const e = event.target.value;
@@ -37,4 +37,3 @@ function Header() {
   );
 }
 
-export default Header;
